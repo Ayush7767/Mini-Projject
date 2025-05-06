@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+        body {
+            background-image: url('light.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #numberInput {
+            width: 45%;
+            height: 30px;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 30px;
+            color: rgb(11, 199, 189);
+        }
+    </style>
+    <title>Factorial Calculator</title>
+    <script>
+        function Factorial() 
+        {
+            let num = document.getElementById('numberInput').value;
+            num = parseInt(num);
+            let result = 1;
+            let output = "";
+
+            if (isNaN(num) || num < 0) {
+                output = "Please enter a valid non-negative number!";
+            } else 
+            {
+                for (let i = 1; i <= num; i++) 
+                {
+                    result *= i;
+                }
+                output = "Factorial of " + num + " is: " + result;
+            }
+
+            document.getElementById('output').innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h2>Factorial Calculator</h2>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="Factorial()">Calculate</button>
+    <p id="output"></p>
+</body>
+</html>

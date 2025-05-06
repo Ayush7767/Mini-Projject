@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('im.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        input[type="number"] {
+            width: 15%;
+            height: 25px;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        #Result {
+            margin-top: 20px;
+            font-size: 30px;
+            color: rgb(161, 31, 70);
+        }
+    </style>
+    <title>Find Maximum of Three Numbers</title>
+</head>
+<body>
+
+    <h1>Find Maximum of Three Numbers</h1>
+
+    <input type="number" id="num1" placeholder="Enter First Number" oninput="Maximum()">
+    <br><br>
+
+    <input type="number" id="num2" placeholder="Enter Second Number" oninput="Maximum()">
+    <br><br>
+
+    <input type="number" id="num3" placeholder="Enter Third Number" oninput="Maximum()">
+    <br><br>
+
+    <p id="Result"></p>
+
+    <script>
+        function Maximum() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const num3 = parseFloat(document.getElementById('num3').value);
+
+            if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
+                const max = (num1 >= num2 && num1 >= num3) ? num1 : (num2 >= num1 && num2 >= num3) ? num2 : num3;
+                document.getElementById('Result').innerHTML = `The maximum is ${max}`;
+            } else {
+                document.getElementById('Result').innerHTML = 'Please enter valid numbers in all fields.';
+            }
+        }
+    </script>
+
+</body>
+</html>

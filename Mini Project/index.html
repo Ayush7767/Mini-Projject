@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush Gaikwad | Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0;
+  }
+  
+  .navbar {
+    background-color: rgba(8, 32, 50, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .navbar a {
+    margin: 0 15px;
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ffffff;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.2s ease-in-out;
+    color: #ffffff;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #00bfff;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #90cdf4;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 6px;
+    margin-top: 40px;
+  }
+  
+  section {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(0, 136, 204, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  img {
+  display: block;
+  margin: 0 auto 20px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00bfff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7),
+              0 0 40px rgba(0, 255, 255, 0.4),
+              0 0 60px rgba(0, 255, 255, 0.2);
+}
+  
+  a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    text-align: left;
+    color: #e0e0e0;
+  }
+  
+  th {
+    background-color: rgba(0, 128, 255, 0.3);
+    color: #fff;
+  }
+  
+  ul {
+    padding-left: 20px;
+    line-height: 1.8;
+  }
+  
+  form {
+    margin-top: 30px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    backdrop-filter: blur(5px);
+  }
+  
+  button {
+    background-color: #0077cc;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  
+  #projectLinks, #mainProjectLinks {
+    display: none;
+    margin-top: 15px;
+  }
+  
+  #projectLinks.show, #mainProjectLinks.show {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  #projectLinks a, #mainProjectLinks a {
+    display: block;
+    margin: 8px 0;
+    color: #80dfff;
+  }
+
+  section:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 200, 255, 0.3);
+}
+
+section {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  background: rgba(0, 136, 204, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+section:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px rgba(0, 255, 255, 0.5),
+    0 0 30px rgba(0, 255, 255, 0.3),
+    0 0 45px rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.6);
+  z-index: 2;
+}
+
+
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#about">About Me</a>
+    <a href="#skills">My Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#grades">Grades</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="container">
+    <h1>Ayush Gaikwad</h1>
+    
+
+    <section id="about">
+      <img src="my Passport.png" alt="Profile Picture" />
+        <p>Hello, I'm <strong>Ayush Gaikwad</strong>, an aspiring engineer currently pursuing a degree in <strong>Computer Science and Engineering (CSE) with a focus on Artificial Intelligence and Machine Learning (AI/ML)</strong>. I have a deep interest in technology, coding, and solving real-world problems through innovative solutions. My journey in AI/ML has sparked my passion for building intelligent systems that can make a significant impact.</p>
+
+        <p>I'm continuously developing my skills in programming, machine learning algorithms, and data structures. I am excited about the possibilities that AI/ML hold in transforming various industries, and I am eager to contribute to projects that push the boundaries of technology.</p>
+        
+        <p>Feel free to connect with me for opportunities, collaborations, or any discussions related to tech and AI/ML!</p>
+        
+        <p>Email: <a href="mailto:gaikwadaayush25@gmail.com">gaikwadaayush25@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/aayush-gaikwad-5b80a932a" target="_blank">View Profile</a></p>
+        
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Java</li>
+        <li>C</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <button onclick="toggleSection('mainProjectLinks')">Main Project</button>
+      <div id="mainProjectLinks">
+        <a href="https://ani-watch-tv12.netlify.app/" target="_blank">Watch Anime App</a>
+      </div>
+
+      <button onclick="toggleSection('projectLinks')">Other Projects</button>
+      <div id="projectLinks">
+        <a href="https://survey-of-anime.netlify.app/" target="_blank">Anime Survey</a><br>
+        <a href="https://max-num.netlify.app/" target="_blank">Max Number</a><br>
+        <a href="https://factorial-calculator-mp.netlify.app/" target="_blank">Factorial Calculator</a>
+      </div>
+    </section>
+
+    <section id="grades">
+      <h2>Grades</h2>
+      <table>
+        <tr>
+          <th>Education</th>
+          <th>Percentage</th>
+          <th>Year</th>
+        </tr>
+        <tr>
+          <td>10th Grade</td>
+          <td>68.49%</td>
+          <td>2022</td>
+        </tr>
+        <tr>
+          <td>12th Grade</td>
+          <td>77.67%</td>
+          <td>2024</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send via WhatsApp</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    function toggleSection(id) {
+      const element = document.getElementById(id);
+      element.classList.toggle("show");
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const message = document.getElementById("message").value;
+      const phone = "+917767095575";
+      const link = `https://wa.me/${phone}?text=Name:%20${encodeURIComponent(name)}%0AMessage:%20${encodeURIComponent(message)}`;
+      window.open(link, "_blank");
+    });
+  </script>
+
+</body>
+</html>
